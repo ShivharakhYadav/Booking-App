@@ -71,49 +71,6 @@ const Home = async () => {
               email: 'charlie@example.com',
               emailTest: 'alice@example.com',
             },
-            {
-              id: 4,
-              name: 'David',
-              email: 'david@example.com',
-              emailTest: 'alice@example.com',
-            },
-            {
-              id: 5,
-              name: 'Eva',
-              email: 'eva@example.com',
-              emailTest: 'alice@example.com',
-            },
-            {
-              id: 6,
-              name: 'Frank',
-              email: 'frank@example.com',
-              emailTest: 'alice@example.com',
-            },
-            {
-              id: 7,
-              name: 'Grace',
-              email: 'grace@example.com',
-              emailTest: 'alice@example.com',
-            },
-            {
-              id: 8,
-              name: 'Henry',
-              email: 'henry@example.com',
-              emailTest: 'alice@example.com',
-            },
-            {
-              id: 9,
-              name: 'Isabel',
-              email: 'isabel@example.com',
-              emailTest: 'alice@example.com',
-            },
-            {
-              id: 10,
-              name: 'Jack',
-              email: 'jack@example.com',
-              emailTest: 'alice@example.com',
-            },
-            // Add more users as needed
           ]}
           totalUsers={10}
           actions={actions}

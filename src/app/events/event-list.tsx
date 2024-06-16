@@ -13,7 +13,7 @@ interface Action {
   onClick: (user: User) => void;
 }
 
-interface UserListProps {
+interface EventListProps {
   initialUsers: User[];
   totalUsers: number;
   actions: Action[];
@@ -21,7 +21,7 @@ interface UserListProps {
   itemsPerPage: number;
 }
 
-const UserList: React.FC<UserListProps> = ({
+const EventList: React.FC<EventListProps> = ({
   initialUsers,
   totalUsers,
   actions,
@@ -168,7 +168,7 @@ const UserList: React.FC<UserListProps> = ({
   );
 };
 
-export default UserList;
+export default EventList;
 
 {
   /* <div className='flex items-center justify-between border-t border-gray-200 bg-white px-4 py-3 sm:px-6'>
