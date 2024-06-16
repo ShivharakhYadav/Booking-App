@@ -18,7 +18,8 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body className={inter.className}>
-        <div className='flex h-screen'>
+        {children}
+        {/* <div className='flex h-screen'>
           <aside className='w-64 bg-gray-800 text-white'>
             <nav className='p-4'>
               <ul>
@@ -63,14 +64,11 @@ export default function RootLayout({
                   TE
                 </div>
                 <div className='h-[10px] w-[10px] rounded-full bg-green-500 absolute right-0 bottom-1'></div>
-                {/* <button className='bg-red-500 px-4 py-2 rounded absolute'>
-                  Logout
-                </button> */}
               </div>
             </header>
             <main className='flex-1'>{children}</main>
           </div>
-        </div>
+        </div> */}
       </body>
     </html>
   );
