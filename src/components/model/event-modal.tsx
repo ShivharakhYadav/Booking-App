@@ -30,6 +30,7 @@ type EventType = {
   endDate: Date;
   banner: any;
   stampPaper: any;
+  seatLayout: any;
 };
 
 const EventForm = {};
@@ -154,6 +155,14 @@ export default function EventModal({ open, setOpen }: EventModalProps) {
                 <div className='relative'>
                   <Label htmlFor='picture'>Stamp Paper</Label>
                   <Input id='picture' type='file' {...register('stampPaper')} />
+                </div>
+              </div>
+            </div>
+            <div className='grid grid-cols-2 gap-4'>
+              <div className='flex flex-col items-start space-y-2'>
+                <div className='relative'>
+                  <Label htmlFor='picture'>Seat Layout</Label>
+                  <Input id='picture' type='file' {...register('seatLayout')} />
                 </div>
               </div>
             </div>
