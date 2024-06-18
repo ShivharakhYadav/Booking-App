@@ -29,6 +29,7 @@ type EventType = {
   startDate: Date;
   endDate: Date;
   banner: any;
+  stampPaper: any;
 };
 
 const EventForm = {};
@@ -57,35 +58,9 @@ export default function EventModal({ open, setOpen }: EventModalProps) {
   const handleAddEvent = (data: EventType) => {
     console.log('data', data);
   };
-  const times = [
-    '00:00',
-    '01:00',
-    '02:00',
-    '03:00',
-    '04:00',
-    '05:00',
-    '06:00',
-    '07:00',
-    '08:00',
-    '09:00',
-    '10:00',
-    '11:00',
-    '12:00',
-    '13:00',
-    '14:00',
-    '15:00',
-    '16:00',
-    '17:00',
-    '18:00',
-    '19:00',
-    '20:00',
-    '21:00',
-    '22:00',
-    '23:00',
-  ];
 
   return (
-    <Dialog open={true} onOpenChange={handleModelChange}>
+    <Dialog open={open} onOpenChange={handleModelChange}>
       <DialogContent>
         <DialogHeader>
           <DialogTitle>Add Event</DialogTitle>
@@ -142,17 +117,18 @@ export default function EventModal({ open, setOpen }: EventModalProps) {
                     <label>From</label>
                     <input
                       {...register(`ticketPrice.${index}.from` as const)}
-                      className='border-2 bg-white p-2 rounded-md'
+                      className='border-2 bg-white p-2 rounded-md uppercase'
                     />
                   </div>
                   <div className='flex flex-col'>
                     <label>To</label>
                     <input
                       {...register(`ticketPrice.${index}.to` as const)}
-                      className='border-2 bg-white p-2 rounded-md'
+                      className='border-2 bg-white p-2 rounded-md uppercase'
                     />
                   </div>
                   <div className='flex flex-col justify-end'>
+                    <label>Color</label>
                     <input
                       type='color'
                       {...register(`ticketPrice.${index}.color` as const)}
@@ -160,7 +136,7 @@ export default function EventModal({ open, setOpen }: EventModalProps) {
                     />
                   </div>
                   <CircleX
-                    className='m-auto cursor-pointer'
+                    className='m-auto cursor-pointer mt-8'
                     onClick={() => remove(index)}
                   />
                 </div>
@@ -171,13 +147,13 @@ export default function EventModal({ open, setOpen }: EventModalProps) {
               <div className='flex flex-col items-start space-y-2'>
                 <div className='relative'>
                   <Label htmlFor='picture'>Banner</Label>
-                  <Input id='picture' type='file' />
+                  <Input id='picture' type='file' {...register('banner')} />
                 </div>
               </div>
               <div className='flex flex-col items-start space-y-2'>
                 <div className='relative'>
                   <Label htmlFor='picture'>Stamp Paper</Label>
-                  <Input id='picture' type='file' />
+                  <Input id='picture' type='file' {...register('stampPaper')} />
                 </div>
               </div>
             </div>
